@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
@@ -12,11 +11,13 @@
         <center>
             <header>
                 <h1>Game card</h1>
-                <span id="time" class="time">00:00</span>
+                <span id="timer"></span>
+                <br>
+                <button type="button" onclick="setIntervalTime()" class="btn btn-primary"> Start</button>
            </header>
             <div class="row mt-2" style="border: 2px solid gray;margin-left: 400px;margin-right: 400px;">
-                <div id="card1" class="card col-md-6 p-5">1</div>
-                <div id="card2" class="card col-md-6 p-5">2</div>
+                <div class="card col-md-6 p-5">1</div>
+                <div class="card col-md-6 p-5">2</div>
                 <div class="card col-md-6 p-5">1</div>
                 <div class="card col-md-6 p-5">2</div>
             </div>

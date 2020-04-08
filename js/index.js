@@ -1,3 +1,4 @@
+
 time = 5;
 var cardList = document.querySelectorAll('.card');
 var len = cardList.length;
@@ -22,15 +23,15 @@ function stopTime(){
 //cách 1:
 cardList.forEach(function(card){
     card.addEventListener('click', function(){
-    card.classList.toggle(this.dataset.type); 
+        let openCard = document.querySelectorAll(".open");
+        let len = openCard.length;
+        if(len < 2){
+            this.classList.add(card.dataset.type,"open");
+        }
+        
     });
 });
-//cách 2:
-// for (i=0;i<=len;i++){
-//     cardList[i].addEventListener('click',function(){
-//         this.classList.toggle(this.dataset.type);
-//     });
-// }
+
 
 
 

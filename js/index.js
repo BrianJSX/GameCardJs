@@ -1,5 +1,6 @@
 
 time = 5;
+arr = [];
 var cardList = document.querySelectorAll('.card');
 var len = cardList.length;
 console.log(cardList);
@@ -27,6 +28,12 @@ cardList.forEach(function(card){
         let len = openCard.length;
         if(len < 2){
             this.classList.add(card.dataset.type,"open");
+            arr.push(card.classList[3]);
+            if(arr[0] == arr[1]){
+                console.log("true");
+            }else{
+                console.log("false"); 
+            }
         }
         
     });

@@ -24,16 +24,22 @@ function stopTime(){
 //cách 1:
 cardList.forEach(function(card){
     card.addEventListener('click', function(){
-        let openCard = document.querySelectorAll(".open");
-        let len = openCard.length;
-        if(len < 2){
-            this.classList.add(card.dataset.type,"open");
-            arr.push(card.classList[3]);
-            if(arr[0] == arr[1]){
-                console.log("true");
-            }else{
-                console.log("false"); 
-            }
+        this.classList.add("open");
+        let classCard = card.classList[0]
+        let cardfirst = document.querySelectorAll('.'+classCard);
+        var cardOpen = document.querySelectorAll('.open');
+        let len = cardOpen.length;
+        if(len == 1){
+            this.classList.add(this.dataset.type);
+        }else if(len >  1 && len <=2){
+            this.classList.add(this.dataset.type);
+                if(cardOpen[0].className == cardOpen[1].className){
+                    console.log('ok');
+                }else{
+                    console.log("false");
+                }
+              
+
         }
         
     });

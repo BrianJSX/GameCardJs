@@ -25,23 +25,19 @@ function stopTime(){
 cardList.forEach(function(card){
     card.addEventListener('click', function(){
         this.classList.add("open");
-        let classCard = card.classList[0]
-        let cardfirst = document.querySelectorAll('.'+classCard);
         var cardOpen = document.querySelectorAll('.open');
-        let len = cardOpen.length;
+        const len = cardOpen.length;
         if(len == 1){
             this.classList.add(this.dataset.type);
         }else if(len >  1 && len <=2){
             this.classList.add(this.dataset.type);
-                if(cardOpen[0].className == cardOpen[1].className){
-                    console.log('ok');
-                }else{
-                    console.log("false");
-                }
-              
-
+            if(cardOpen[0].className == this.className){
+                console.log(cardOpen);
+            }else{
+                
+            }
         }
-        
+        console.log(cardOpen);
     });
 });
 
